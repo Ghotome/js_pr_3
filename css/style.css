@@ -1,0 +1,264 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 70px;
+    margin: 0;
+    background-color: #E0F7FA;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.body-top {
+    width: 80%;
+    border: 2px solid #007196;
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header {
+    padding: 1em;
+    color: white;
+    background-color: #007196;
+    overflow: auto;
+
+}
+
+#logo {
+    max-width: 180px;
+    max-height: 140px;
+    float: left;
+    margin-right: 20px;
+}
+
+#menu {
+    background-color: #007196;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+a {
+    color: white;
+    border: solid white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+a:hover {
+    background-color: white;
+    color: #007196;
+
+}
+
+.tour {
+    border: solid #007196;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.tour img {
+    width: 250px;
+    height: 170px;
+    padding: 5px;
+    object-fit: cover;
+
+}
+
+.tour a {
+    background-color: #007196;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tour a:hover {
+    background-color: white;
+    color: #007196;
+
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    color: white;
+    background-color: #007196;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer .col {
+    margin: 10px;
+    text-align: center;
+
+}
+
+.col-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1 {
+    margin: auto;
+    font-size: 64px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        max-width: 100px;
+        max-height: 70px;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 14px;
+        margin-top: 10px;
+
+    }
+}
+
+.slider-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.slider-container {
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 700px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.slider-image {
+    max-width: 600px;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 113, 150, 0.8);
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 113, 150, 1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007196;
+    color: white;
+    border: none;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    z-index: 11;
+}
+
+.close-btn:hover {
+    background-color: #005570;
+}
+
+.slide-counter {
+    color: #007196;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container {
+        max-width: 90%;
+        max-height: 400px;
+        padding: 10px;
+    }
+
+    .slider-image {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .prev-btn,
+    .next-btn {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
+    .close-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 24px;
+    }
+}
